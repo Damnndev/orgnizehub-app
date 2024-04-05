@@ -1,3 +1,4 @@
+import Logo from "@/components/logo";
 import { Footer } from "./_components/footer";
 import { NavBar } from "./_components/navbar";
 

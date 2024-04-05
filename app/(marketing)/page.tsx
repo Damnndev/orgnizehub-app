@@ -37,14 +37,14 @@ const MarketingPage = () => {
           Collaborate, manage projects, and reach new productivity peaks.
           Accomplish it all with OrganizeHub.
         </div>
-        <div className="flex items-center justify-center space-x-4 md:block md:w-auto w-full">
+        <div className="flex flex-col gap-y-2 md:flex-row md:items-center md:justify-center md:space-x-4 md:block md:w-auto w-full">
           <Button className="md:hidden" size="sm" variant="outline" asChild>
             <Link href="/sign-in">Log in</Link>
           </Button>
           <Button className="md:hidden" size="sm" asChild>
             <Link href="/sign-up">Sign up</Link>
           </Button>
-          <Button className="hidden md:flex mt-4" size="lg" asChild>
+          <Button variant="secondary" className="hidden md:flex mt-4" size="lg" asChild>
             <Link href="/sign-up"> Get Started</Link>
           </Button>
         </div>
