@@ -24,7 +24,7 @@ export const CardModal = () => {
     queryKey: ["card-logs", id],
     queryFn: () => fetch(`/api/cards/${id}/logs`).then((res) => res.json()),
   });
-
+console.log(auditLogsData);
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent>

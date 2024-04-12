@@ -28,7 +28,9 @@ export const createAuditLog = async (props: Props) => {
         entityTitle,
         action,
         userId: user.id,
-        userName: user?.firstName + " " + user?.lastName,
+        userName: `${user.firstName}${
+          user.lastName ? " " + user.lastName : ""
+        }`,
         userImage: user?.imageUrl,
       },
     });
