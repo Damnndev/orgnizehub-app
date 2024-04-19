@@ -1,7 +1,7 @@
 "use client";
 
 import { useOrganization } from "@clerk/nextjs";
-import { CreditCardIcon } from "lucide-react";
+import { BookmarkCheckIcon } from "lucide-react";
 import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -30,8 +30,8 @@ export const Info = () => {
       <div className="space-y-1">
         <p className="font-semibold text-xl">{organization?.name}</p>
         <div className="flex items-center text-xs">
-          <CreditCardIcon className="h-3 w-3 mr-1" />
-          Free
+          <BookmarkCheckIcon className="h-3 w-3 mr-1" />
+          Work account
         </div>
       </div>
     </div>

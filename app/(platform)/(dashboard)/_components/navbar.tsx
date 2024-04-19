@@ -15,7 +15,7 @@ export const NavBar = () => {
         </div>
         <FormPopover align="start" side="bottom" sideOffset={18}>
           <Button
-            variant="primary"
+            variant="logo"
             size="sm"
             className="rounded-sm hidden md:block h-auto py-1.5 px-2"
           >
@@ -24,7 +24,7 @@ export const NavBar = () => {
         </FormPopover>
         <FormPopover>
           <Button
-            variant="primary"
+            variant="logo"
             size="sm"
             className="rounded-sm block sm:hidden"
           >

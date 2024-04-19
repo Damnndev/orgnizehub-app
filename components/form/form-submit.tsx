@@ -12,6 +12,7 @@ interface FormSubmitProps {
     | "default"
     | "destructive"
     | "outline"
+    | "logo"
     | "secondary"
     | "ghost"
     | "link"
