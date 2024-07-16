@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<a name="readme-top"></a>
 
-## Getting Started
+<div align="center">
+<a href="https://orgnizehub-app.vercel.app">
+  <img width="100px" src="https://github.com/user-attachments/assets/9cf34d42-ca57-4776-b9b9-e3e3195b37bb" alt="Logo" />
+</a>
 
-First, run the development server:
+## OrganizeHub
+Trello clone with project management functionalities such as customizable boards, lists, and cards, real-time collaboration
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<details>
+<summary>Table of Contents</summary>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Screenshots of OrganizeHub website](#screenshots-of-organizehub-web)
+- [To begin](#to-begin)
+  - [Prerequisites](#prerequisites)
+  - [Install](#Install)
+- [🛠️ Stack](#️-stack)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+</details>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Screenshots of OrganizeHub website
 
-## Learn More
+![Web screenshot](https://github.com/user-attachments/assets/0a87c5f9-10b4-409b-92cb-17ac4898f061)
+![Mobile screenshot](https://github.com/user-attachments/assets/8210dc75-420c-49a1-91db-e73b17359c74)
 
-To learn more about Next.js, take a look at the following resources:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## To begin
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Prerequisites
 
-## Deploy on Vercel
+- NVM (recommended to ensure Node version) see [official documentation](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ```sh
+  nvm use
+  # or
+  nvm use <version>
+  ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  > If you want to automate the process, you can create a script following the [official documentation](https://github.com/nvm-sh/nvm?tab=readme-ov-file#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file)
+
+<details>
+	<summary>Small automation script</summary>
+	
+- Linux/MacOS:
+	```sh
+	# .bashrc | .zshrc | any configuration file
+	# small script to change version when entering the directory
+	cd() {
+  builtin cd "$@"
+		if [[ -f .nvmrc ]]; then
+			nvm use > /dev/null
+			# If you want to get the version
+			nvm use
+		fi
+	}
+	```
+
+- Windows:
+
+  ```powershell
+  # $PROFILE
+  function Change-Node-Version {
+  	param($path)
+  	& Set-Location $path
+  	$pwd = pwd
+  	if ( Test-Path "$pwd\\.nvmrc" ) {
+  		$version = Get-Content .nvmrc
+  		nvm use $version
+  	}
+  }
+  New-Alias -Name cd -Value Change-Node-Version -Force -Option AllScope
+  ```
+
+  </details>
+
+  - PNPM (it is our recommendation for its efficiency and speed)
+
+  ```sh
+  npm install -g pnpm
+  ```
+
+  - o NPM
+
+  ```sh
+  npm install npm@latest -g
+  ```
+
+  ### Install
+
+    1. Clone repo
+  
+     ```sh
+     git clone https://github.com/Damnndev/orgnizehub-app.git
+     ```
+    2. Install NPM packages
+  
+     ```sh
+     pnpm install
+     ```
+  
+    3. Run the project	
+     ```sh
+     pnpm run dev
+     ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🛠️ Stack
+
+- [![Next][next-badge]][next-url] - The React Framework for the Web.
+- [![Typescript][typescript-badge]][typescript-url] - JavaScript with syntax for types.
+- [![Tailwind CSS][tailwind-badge]][tailwind-url] - A utility-first CSS framework for rapidly building custom designs.
+- [![MySQL][mysql-badge]][mysql-url] - The world's most popular open source database.
+- [![Prisma][prisma-badge]][prisma-url] - Prisma provides the best experience to work and interact with databases.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+[next-badge]: https://img.shields.io/badge/Next.js-fff?style=for-the-badge&logo=nextdotjs&logoColor=000000&color=fff
+[next-url]: https://nextjs.org/
+[mysql-url]: https://www.mysql.com/
+[mysql-badge]: https://img.shields.io/badge/MySQL-ffffff?style=for-the-badge&logo=mysql&logoColor=38bdf8
+[prisma-url]: https://www.prisma.io/
+[prisma-badge]: https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=2D3748&color=fff
+[typescript-url]: https://www.typescriptlang.org/
+[tailwind-url]: https://tailwindcss.com/
+[typescript-badge]: https://img.shields.io/badge/Typescript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&color=blue
+[tailwind-badge]: https://img.shields.io/badge/Tailwind-ffffff?style=for-the-badge&logo=tailwindcss&logoColor=38bdf8
+
+
